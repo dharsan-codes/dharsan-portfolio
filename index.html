@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dharsan Brochure</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f2f4f8;
+      color: #333;
+    }
+    header, footer {
+      background: #1f4068;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    h1, h2 {
+      margin-bottom: 10px;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #ff6f61;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #ff3b2e;
+    }
+    #response {
+      margin-top: 10px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dharsan Solutions</h1>
+    <p>Creative. Scalable. Reliable.</p>
+  </header>
+
+  <section>
+    <div class="card">
+      <h2>About Us</h2>
+      <p>We provide end-to-end web development and machine learning solutions. Our goal is to help you turn ideas into real, working digital products.</p>
+    </div>
+
+    <div class="card">
+      <h2>Our Services</h2>
+      <ul>
+        <li>🔹 Website Design & Development</li>
+        <li>🔹 ML Model Deployment</li>
+        <li>🔹 Google Cloud & Hosting Setup</li>
+        <li>🔹 Portfolio & Resume Websites</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <p id="response"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Dharsan Solutions | All rights reserved</p>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("response").textContent = "Thank you! Your message has been sent.";
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
